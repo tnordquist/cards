@@ -2,8 +2,8 @@ package edu.cnm.deepdive;
 
 /**
  * Instances of this class represent single cards in a deck of standard playing
- * cards.  tese intances are immutable: once initialized, the ranl and suit of
- * the a card cant be changed.
+ * cards. These instances are immutable: once initialized, the rank and suit of
+ * a card can't be changed.
  *
  * @author Nicholas Bennett &amp; Deep Dive Coding Java + Android Bootcamp cohort 6
  * @version 1.0

@@ -8,11 +8,11 @@ import java.util.List;
 import java.util.Random;
 
 /**
- * <code>Deck</code> implements a single deck of standard playing cards.
- * Methods
+ * <code>Deck</code> implements a single deck of standard playing cards. Methods
  * are included for shuffling and dealing cards from the deck.
  *
- * @author
+ * @author Nicholas Bennett &amp; Deep Dive Coding Java + Android Bootcamp cohort 6
+ * @version 1.0
  */
 
 public class Deck {
