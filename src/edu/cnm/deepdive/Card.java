@@ -5,23 +5,25 @@ package edu.cnm.deepdive;
  * cards. These instances are immutable: once initialized, the rank and suit of
  * a card can't be changed.
  *
- * @author Nicholas Bennett &amp; Deep Dive Coding Java + Android Bootcamp cohort 6
+ * @author Nicholas Bennett &amp; Deep Dive Coding Java + Android Bootcamp
+ * cohort 6
  * @version 1.0
  */
 
 import java.util.Random;
 
-public class Card {
+public class Card implements Comparable<Card> {
+
 
   private final Rank rank;
   private final Suit suit;
 
   /**
-   * Initializes the <code>Card</code> instance with the specified {@link
-   * Suit} and {@link Rank}.
+   * Initializes the <code>Card</code> instance with the specified {@link Suit}
+   * and {@link Rank}.
    *
-   * @param rank  card's rank (A, 2, &hellip; K).
-   * @param suit  card's suit (Clubs, Diamonds, Hearts, Spades).
+   * @param rank card's rank (A, 2, &hellip; K).
+   * @param suit card's suit (Clubs, Diamonds, Hearts, Spades).
    */
 
   public Card(Rank rank, Suit suit) {
@@ -41,5 +43,14 @@ public class Card {
   @Override
   public String toString() {
     return String.format("%2s %s", rank, suit);
+  }
+
+  @Override
+  public int compareTo(Card other) {
+    int comparison = this.getSuit().compareTo(other.getSuit());
+    if (comparison == 0) {
+      comparison = getRank().compareTo(other.getRank());
+    }
+    return comparison;
   }
 }
